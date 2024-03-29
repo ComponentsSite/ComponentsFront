@@ -9,7 +9,7 @@ import { store } from "../../store";
 // Style 
 
 const day = {
-  primary: '#fef8f8',
+  primary: 'linear-gradient(45deg, #FC466B, #3F5EFB);',
   secondary: "black",
   tertiary: "#592519",
   textNavbar:"white"
@@ -25,6 +25,7 @@ const night = {
 const StyleCardList = styled.div`
     display: flex;
     flex-wrap: wrap;
+    height: 100vh;
 `;
 
 // Data

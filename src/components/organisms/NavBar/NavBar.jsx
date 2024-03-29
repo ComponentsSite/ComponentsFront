@@ -1,29 +1,39 @@
 import React from "react";
 import styled from "styled-components";
-import { Btn, Logo , Heading, Section } from "../../atoms";
+import { Btn , Heading, Section } from "../../atoms";
 import { Link } from "react-router-dom";
+import {
+  FaHouse 
+} from "react-icons/fa6";
+import {
+  FaUser,
+  FaMoneyBillWaveAlt
+} from "react-icons/fa";
 
 
-const StyleNavBar = styled.div`
-    height: fit-content;
-    width: 100%;
-    background : ${(props) => props.background ? props.background : props.theme.tertiary};
+const StyleNavBar = styled.nav`
     display: flex;
-    padding: 16px;
+    transform-style: preserve-3d;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 2;
+    margin: 0px auto;
+    perspective: 2000px;
+    flex-wrap: wrap;
+    top: 3em;
+    margin-bottom: 
 `;
 
 const NavBar = ({ title, text,icon, handler, ...props }) => {
     
   return (
-        <StyleNavBar handler={handler}>
-
-        <Section>
-            <Heading marginLeft="8px">{title}</Heading>
-        </Section>
-        <Link to="/"><Logo marginLeft="8px"></Logo></Link>
-        <Link to="/"><Btn text="Accueil"> </Btn></Link>
-        <Link to="/profil"><Btn text="Profil"> </Btn></Link>
-        <Btn text="Vendre un composant"></Btn>
+    <StyleNavBar handler={handler}>
+      <Section>
+        <Heading marginLeft="8px">{title}</Heading>
+      </Section>
+        <Link to="/"><Btn icon={<FaHouse/>}></Btn></Link>
+        <Link to="/profil"><Btn icon={<FaUser/>}> </Btn></Link>
+        <Btn  icon={<FaMoneyBillWaveAlt />}></Btn>
         {props.children}
     </StyleNavBar>
   );

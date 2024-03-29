@@ -5,10 +5,7 @@ import styled from "styled-components";
 
 const  headingStyle =`
     background : transparent;
-    color: white;
-    &:hover{
-        color: ${(props) => (props.color ? props.color : props.theme.secondary)};
-    }
+    color: ${(props) => (props.color ? props.color : props.theme.secondary)};
     margin: 0 !important;
     ${(props) => (props.marginLeft ? "margin-left: " + props.marginLeft + " ;" : "")};
 `;
