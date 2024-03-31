@@ -1,5 +1,5 @@
 import {  Heading, Paragraph, Section } from "../../atoms";
-import { Btn} from "../../atoms"
+import { Btn, Divider} from "../../atoms"
 import styled from "styled-components";
 
 const StyledCard = styled.div`
@@ -31,14 +31,15 @@ const StyledAvatarCard = styled.div`
 `;
 
 
-const CompleteCard = ({ urlMain, title, text, url = <></>, ...props }) => {
+const CompleteCard = ({ urlMain, title, text, url, component = <></>, ...props }) => {
   
   return (
     <StyledCard>
-     <img src={urlMain} width="250px" height="200px" alt="Component react"/>
+      {component}
       <StyledBottomCard>
         <StyledAvatarCard>
           <img src={url} width="50px" height="50px" alt="avatar du créateur" />
+          <Divider />
           <Section>
             <Section>
               <Section>

@@ -40,7 +40,6 @@ const Form = (...props ) => {
     'Content-Type': 'application/json',
     'Authorization': 'Bearer your_access_token_here',
     'Access-Control-Allow-Origin': '*',
-    // Ajoutez d'autres en-têtes si nécessaire
   };
 
     const handleSubmit = (e) => {

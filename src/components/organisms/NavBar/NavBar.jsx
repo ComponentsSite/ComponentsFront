@@ -12,16 +12,9 @@ import {
 
 
 const StyleNavBar = styled.nav`
-    display: flex;
-    transform-style: preserve-3d;
-    justify-content: space-evenly;
-    position: relative;
-    z-index: 2;
-    margin: 0px auto;
-    perspective: 2000px;
-    flex-wrap: wrap;
-    top: 3em;
-    margin-bottom: 
+  display: flex;
+  justify-content: center;
+  width: 100%;
 `;
 
 const NavBar = ({ title, text,icon, handler, ...props }) => {
@@ -31,7 +24,7 @@ const NavBar = ({ title, text,icon, handler, ...props }) => {
       <Section>
         <Heading marginLeft="8px">{title}</Heading>
       </Section>
-        <Link to="/"><Btn icon={<FaHouse/>}></Btn></Link>
+        <Link to="/home"><Btn icon={<FaHouse/>}></Btn></Link>
         <Link to="/profil"><Btn icon={<FaUser/>}> </Btn></Link>
         <Btn  icon={<FaMoneyBillWaveAlt />}></Btn>
         {props.children}

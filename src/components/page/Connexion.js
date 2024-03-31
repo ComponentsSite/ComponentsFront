@@ -21,18 +21,6 @@ const night = {
 }
   
 
-const StyledAppContainer = styled.div`
-  background: ${(props) => props.theme.primary};
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center;
-  color: ${(props) => props.theme.secondary}
-  box-sizing: border-box;
-  font-family: 'Noto Sans JP', sans-serif;
-  height: 100Vh;
-`;
-
 function Connexion() {
 
     const [isNightMode, setIsNightMode] = useState(true);
@@ -43,21 +31,10 @@ function Connexion() {
   return (
     <Provider store={store}>
         <ThemeProvider theme={invert(isNightMode)}>
-        <NightModeProvider
-        value={{
-          changeNightMode: () => {
-            setIsNightMode(!isNightMode);
-          },
-          nightMode: isNightMode,
-        }}
-      >
-        <StyledAppContainer> 
            <Section>
             <Heading marginLeft="8px">Connexion</Heading>
            </Section> 
             <Form />
-            </StyledAppContainer>
-        </NightModeProvider>
         </ThemeProvider>
     </Provider>
   );
