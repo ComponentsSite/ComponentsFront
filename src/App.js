@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, Profil,Connexion } from "./components/page";
+import { Home, Profil,Connexion,SellComponent } from "./components/page";
 import {ThemeProvider, styled} from "styled-components";
 import { NightModeProvider } from "./contexts"
 import { NightModeSwitch } from "./components/molecules";
@@ -64,6 +64,7 @@ function App() {
                 <Route path="/" element={<Connexion/>} />
                 <Route path="/home" element={<Home/>} />
                 <Route path="/profil" element={<Profil/>} />
+                <Route path="/sellcomponent" element={<SellComponent/>} />
               </Routes>  
             </BrowserRouter>
           </StyledAppContainer>

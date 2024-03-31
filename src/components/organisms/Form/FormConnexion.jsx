@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+
 import styled from "styled-components";
 import { InputText, Btn } from "../../atoms";
 import axios from "axios";
@@ -30,7 +30,7 @@ const StyledLabel = styled.label`
 `;
 
 
-const Form = (...props ) => {
+const FormConnexion = (...props ) => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -80,4 +80,4 @@ const Form = (...props ) => {
   );
 };
 
-export default Form;
+export default FormConnexion;

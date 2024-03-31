@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {FormConnexion} from '../organisms'
+import {Form} from '../organisms'
 import { ThemeProvider } from "styled-components";
 import { Provider } from "react-redux";
 import { store } from "../../store";
@@ -18,9 +18,28 @@ const night = {
     tertiary: "#fef8f8",
     textNavbar:"black"
 }
-  
 
-function Connexion() {
+const formData = [
+  {
+    value: "",
+    label: "Nom du composant",
+  },
+  {
+    value: "",
+    label: "Type de composant",
+  },
+  {
+    value: "",
+    label: "Prix",
+  },
+  {
+    value: "",
+    label: "Code css",
+  },
+];
+
+
+function BuyComponent() {
 
     const [isNightMode, setIsNightMode] = useState(true);
 
@@ -31,12 +50,12 @@ function Connexion() {
     <Provider store={store}>
         <ThemeProvider theme={invert(isNightMode)}>
            <Section>
-            <Heading marginLeft="8px">Connexion</Heading>
+            <Heading marginLeft="8px">Vendre un composant</Heading>
            </Section> 
-            <FormConnexion />
+            <Form />
         </ThemeProvider>
     </Provider>
   );
 }
 
-export default Connexion;
+export default BuyComponent;
