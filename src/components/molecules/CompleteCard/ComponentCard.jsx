@@ -1,6 +1,7 @@
 import {  Heading, Paragraph, Section } from "../../atoms";
-import { Btn, Divider} from "../../atoms"
+import { Btn} from "../../atoms"
 import styled from "styled-components";
+import { useNavigate } from 'react-router-dom';
 
 const StyledCard = styled.div`
   border-radius: 25px;
@@ -40,6 +41,12 @@ const StyledAvatarCard = styled.div`
 
 
 const CompleteCard = ({ urlMain, title, text, url, component = <></>, ...props }) => {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/buycomponent", { replace: true });
+  };
   
   return (
     <StyledCard>
@@ -63,7 +70,7 @@ const CompleteCard = ({ urlMain, title, text, url, component = <></>, ...props }
         
         <StyledAchatCard>
           <Paragraph>{"Prix : " + text}</Paragraph>
-          <Btn text="Acheter"></Btn>
+          <Btn text="Acheter" onClick={handleClick}></Btn>
         </StyledAchatCard>
       </StyledBottomCard>
      {props.children}

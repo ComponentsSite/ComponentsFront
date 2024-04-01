@@ -6,5 +6,6 @@ import TodoListCopy from "./TodoListCopy/TodoListCopy.jsx";
 import NavBar from "./NavBar/NavBar.jsx";
 import PlayList from "./PlayList/PlayList.jsx";
 import FormConnexion from "./Form/FormConnexion.jsx";
+import FormAchatCmpnt from "./FormAchatCmpnt/FormAchatCmpnt.jsx";
 
-export { Menu, FormConnexion, CardList, TodoList,TodoListCopy, NavBar, PlayList, FormVenteCmpnt };
+export { Menu, FormConnexion, CardList, TodoList,TodoListCopy, NavBar, PlayList, FormVenteCmpnt, FormAchatCmpnt };

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { InputText, Btn } from "../../atoms";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
 
 
 const StyledForm = styled.form`
@@ -16,26 +15,28 @@ const StyledForm = styled.form`
   text-align: center;
   flex-direction: column;
   display: flex;
+  width: 300px;
 `;
 const StyledLabel = styled.label`
   font-weight: 500;
-  color: ${(props) => props.background ? props.color : props.theme.secondary};
+  color: ${(props) => props.background ? props.color : props.theme.tertiary};
   opacity: 0.7;
   font-size: 1.4rem;
   margin-top: 0;
   margin-bottom: 12px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  text-align: start;
 `;
 
 
-const FormVenteCmpnt = ( data, ...props  ) => {
+const FormAchatCmpnt = ( data, ...props  ) => {
 
-    const [component, setComponent] = useState("");
-    const navigate = useNavigate();
+    const [prix, setPrix] = useState("");
+    const [creator, setCreator] = useState("");
  
   const handleSubmit = (e) => {
     /* e.preventDefault();
-    axios.post(
+    axios.get(
       "http://127.0.0.1:8000/api/login_check", { username, password }, headers
     ).then((response) =>{
       
@@ -48,30 +49,28 @@ const FormVenteCmpnt = ( data, ...props  ) => {
   };
 
   const handleChange = (e) => {
-    setComponent(e.target.value);
+    alert("Félicitation, vous venez d'acheter le style du composant!");
   };
 
   return (
     <StyledForm onSubmit={handleSubmit}>
-      if (Array.isArray(data)) {
-        console.log("it's work")
-      } else {
-        console.error("data n'est pas un tableau !")
-      }
-      {data.map((x, i) => {
-        let {value, label } = x;
-        return (
-            <>
-                
-                <StyledLabel>{label}</StyledLabel>
-                <InputText key={i} id={value} name={value} value={value} onChange={handleChange}></InputText>
-            </>
-        );
-      })}
-      {props.children}
-      <Btn text={"Envoyer"}></Btn>
-    </StyledForm>
+       <StyledLabel>Créateur</StyledLabel>
+       <InputText 
+         id="creator"
+         name="creator"
+         value={creator}
+         onChange={(e) => setCreator(e.target.value)}
+       />
+       <StyledLabel>Prix</StyledLabel>
+       <InputText 
+         id="prix"
+         name="prix"
+         value={prix}
+         onChange={(e) => setPrix(e.target.value)}
+       />
+       <Btn text="Acheter" type="submit" onClick={handleChange} />
+   </StyledForm>
   );
 };
 
-export default FormVenteCmpnt;
+export default FormAchatCmpnt;

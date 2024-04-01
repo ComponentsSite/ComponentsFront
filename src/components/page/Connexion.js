@@ -29,12 +29,12 @@ function Connexion() {
 
   return (
     <Provider store={store}>
-        <ThemeProvider theme={invert(isNightMode)}>
-           <Section>
-            <Heading marginLeft="8px">Connexion</Heading>
-           </Section> 
-            <FormConnexion />
-        </ThemeProvider>
+      <ThemeProvider theme={invert(isNightMode)}>
+        <Section>
+          <Heading marginLeft="8px">Connexion</Heading>
+        </Section> 
+        <FormConnexion />
+      </ThemeProvider>
     </Provider>
   );
 }

@@ -1,6 +1,6 @@
 import Home from "./Home";
-import Profil from "./Profil";
 import Connexion from "./Connexion";
 import SellComponent from "./SellComponent";
+import BuyComponent from "./BuyComponent";
 
-export { Home, Profil, Connexion, SellComponent, };
+export { Home, Connexion, SellComponent, BuyComponent };

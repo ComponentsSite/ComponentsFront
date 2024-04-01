@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, Profil,Connexion,SellComponent } from "./components/page";
+import { Home,Connexion,SellComponent, BuyComponent } from "./components/page";
 import {ThemeProvider, styled} from "styled-components";
 import { NightModeProvider } from "./contexts"
 import { NightModeSwitch } from "./components/molecules";
@@ -28,7 +28,7 @@ const day = {
 
 const night = {
   primary:"linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);",
-  secondary: "white",
+  secondary: "black",
   tertiary: "#fef8f8",
   textNavbar:"black"
 }
@@ -63,8 +63,8 @@ function App() {
               <Routes>
                 <Route path="/" element={<Connexion/>} />
                 <Route path="/home" element={<Home/>} />
-                <Route path="/profil" element={<Profil/>} />
                 <Route path="/sellcomponent" element={<SellComponent/>} />
+                <Route path="/buycomponent" element={<BuyComponent/>} />
               </Routes>  
             </BrowserRouter>
           </StyledAppContainer>

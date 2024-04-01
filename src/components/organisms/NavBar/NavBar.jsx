@@ -6,7 +6,6 @@ import {
   FaHouse 
 } from "react-icons/fa6";
 import {
-  FaUser,
   FaMoneyBillWaveAlt
 } from "react-icons/fa";
 
@@ -25,7 +24,6 @@ const NavBar = ({ title, text,icon, handler, ...props }) => {
         <Heading marginLeft="8px">{title}</Heading>
       </Section>
         <Link to="/home"><Btn icon={<FaHouse/>}></Btn></Link>
-        <Link to="/profil"><Btn icon={<FaUser/>}> </Btn></Link>
         <Link to="/sellcomponent"><Btn icon={<FaMoneyBillWaveAlt />}></Btn></Link>
         {props.children}
     </StyleNavBar>

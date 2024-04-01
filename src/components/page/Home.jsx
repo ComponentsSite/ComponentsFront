@@ -51,11 +51,11 @@ function Home() {
 
   return (
     <Provider store={store}>
-          <NavBar title="Element Craft" text="profil">
-          </NavBar>
-            <StyleCardList>
-              <CardList data={cardData}></CardList> 
-            </StyleCardList>
+      <NavBar title="Element Craft">
+      </NavBar>
+      <StyleCardList>
+        <CardList data={cardData}></CardList> 
+      </StyleCardList>
     </Provider>
   );
 }
