@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { InputText, Btn } from "../../atoms";
 import axios from "axios";
+import {BtnCustom, BtnCustom2, BtnCustom3, BtnCustom4} from "../../atoms"
+import { useNavigate } from "react-router-dom";
 
 
 const StyledForm = styled.form`
@@ -22,7 +24,7 @@ const StyledLabel = styled.label`
   color: ${(props) => props.background ? props.color : props.theme.tertiary};
   opacity: 0.7;
   font-size: 1.4rem;
-  margin-top: 0;
+  margin-top: 16px;
   margin-bottom: 12px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
   text-align: start;
@@ -33,8 +35,10 @@ const FormAchatCmpnt = ( data, ...props  ) => {
 
     const [prix, setPrix] = useState("");
     const [creator, setCreator] = useState("");
+    const currentPath = window.location.pathname;
+    const navigate = useNavigate();
  
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
     /* e.preventDefault();
     axios.get(
       "http://127.0.0.1:8000/api/login_check", { username, password }, headers
@@ -48,12 +52,26 @@ const FormAchatCmpnt = ( data, ...props  ) => {
     console.log("Envoyer")
   };
 
-  const handleChange = (e) => {
+  const handleSubmit = (e) => {
     alert("Félicitation, vous venez d'acheter le style du composant!");
+    navigate('/home');
   };
 
   return (
-    <StyledForm onSubmit={handleSubmit}>
+
+    <StyledForm onSubmit={handleChange}>
+     {(() => {
+        switch (currentPath) {
+          case 'buycomponent/BtnCustom2':
+            return <BtnCustom2 text="label"></BtnCustom2>;
+          case 'buycomponent/BtnCustom3':
+            return <BtnCustom3 text="label"></BtnCustom3>;
+            case 'buycomponent/BtnCustom4':
+            return <BtnCustom4 text="label"></BtnCustom4>;
+          default:
+            return <BtnCustom text="label"></BtnCustom>;
+        }
+      })()}
        <StyledLabel>Créateur</StyledLabel>
        <InputText 
          id="creator"
@@ -68,7 +86,7 @@ const FormAchatCmpnt = ( data, ...props  ) => {
          value={prix}
          onChange={(e) => setPrix(e.target.value)}
        />
-       <Btn text="Acheter" type="submit" onClick={handleChange} />
+       <Btn text="Acheter" type="submit" onClick={handleSubmit} />
    </StyledForm>
   );
 };

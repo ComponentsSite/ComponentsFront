@@ -22,18 +22,18 @@ const night = {
 const formData = [
   {
     label: "Nom du composant",
-    value: " ",
+    value: "oui ",
   },
   {
     label: "Type de composant",
-    value: "",
+    value: " oui",
   },
   {
-    value: " ",
+    value: "oui ",
     label: "Prix",
   },
   {
-    value: " ",
+    value: "oui ",
     label: "Code css",
   },
 ];

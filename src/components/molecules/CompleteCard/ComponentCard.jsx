@@ -40,12 +40,13 @@ const StyledAvatarCard = styled.div`
 `;
 
 
-const CompleteCard = ({ urlMain, title, text, url, component = <></>, ...props }) => {
+const CompleteCard = ({ title, text, url, component, name = "", ...props }) => {
 
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/buycomponent", { replace: true });
+    console.log(name, " name")
+    navigate(`/buycomponent/${name}`);
   };
   
   return (

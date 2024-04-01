@@ -10,13 +10,13 @@ const StyleListCard = styled.ul`
   padding: 0;
 `;
 
-const CardList = ({ data,text, urlMain, title, component, ...props }) => {
+const CardList = ({ data,text, name, title, component, ...props }) => {
   return (
     <StyleListCard>
       {data.map((x, i) => {
-        const { url, text, urlMain,title,component } = x;
+        const { url, text, name,title,component } = x;
         return (
-          <CompleteCard key={i} urlMain={urlMain} text={text} title={title} url={url} component={component}> 
+          <CompleteCard key={i} name={name} text={text} title={title} url={url} component={component}> 
           </CompleteCard>
         );
       })}

@@ -64,7 +64,7 @@ function App() {
                 <Route path="/" element={<Connexion/>} />
                 <Route path="/home" element={<Home/>} />
                 <Route path="/sellcomponent" element={<SellComponent/>} />
-                <Route path="/buycomponent" element={<BuyComponent/>} />
+                <Route path="/buycomponent/:name" element={<BuyComponent/>} />
               </Routes>  
             </BrowserRouter>
           </StyledAppContainer>

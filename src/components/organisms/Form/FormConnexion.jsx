@@ -43,12 +43,13 @@ const FormConnexion = (...props ) => {
   };
 
     const handleSubmit = (e) => {
+      navigate("/home", { replace: true });
       e.preventDefault();
       axios.post(
-        "http://127.0.0.1:8000/api/login_check", { username, password }, headers
+        "http://localhost:41545/api/login_check", { username, password }, headers
       ).then((response) =>{
         
-        navigate("/home", { replace: true });
+        
       }).catch(error => {
         console.error("Erreur de connexion:", error);
       });
