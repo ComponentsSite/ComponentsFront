@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import {FormVenteCmpnt} from '../organisms'
-import { ThemeProvider } from "styled-components";
+import {FormVenteCmpnt,NavBar} from '../organisms'
+import { ThemeProvider, styled } from "styled-components";
 import { Provider } from "react-redux";
 import { store } from "../../store";
 import { Heading, Section } from "../atoms";
@@ -19,25 +19,12 @@ const night = {
     textNavbar:"black"
 }
 
-const formData = [
-  {
-    label: "Nom du composant",
-    value: "oui ",
-  },
-  {
-    label: "Type de composant",
-    value: " oui",
-  },
-  {
-    value: "oui ",
-    label: "Prix",
-  },
-  {
-    value: "oui ",
-    label: "Code css",
-  },
-];
-
+const StyleSellPage = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 24px;
+`; 
 
 function SellComponent() {
 
@@ -49,10 +36,14 @@ function SellComponent() {
   return (
     <Provider store={store}>
         <ThemeProvider theme={invert(isNightMode)}>
-           <Section>
-            <Heading marginLeft="8px">Vendre un composant</Heading>
-           </Section> 
-            <FormVenteCmpnt data={formData}></FormVenteCmpnt>
+          <NavBar title="Element Craft"></NavBar>
+          <StyleSellPage>
+            <Section>
+              <Heading marginLeft="8px">Vendre un composant</Heading>
+            </Section> 
+            <FormVenteCmpnt></FormVenteCmpnt>
+          </StyleSellPage>
+           
         </ThemeProvider>
     </Provider>
   );

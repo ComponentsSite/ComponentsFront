@@ -23,7 +23,6 @@ const PlayList = () => {
 
   const dispatch = useDispatch();
   const apiReturn = useSelector((state) => {
-    console.log(state);
     return state.playlists;
   });
 

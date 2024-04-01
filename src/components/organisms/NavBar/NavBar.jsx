@@ -8,6 +8,7 @@ import {
 import {
   FaMoneyBillWaveAlt
 } from "react-icons/fa";
+import { IoLogOut } from "react-icons/io5";
 
 
 const StyleNavBar = styled.nav`
@@ -25,6 +26,7 @@ const NavBar = ({ title, text,icon, handler, ...props }) => {
       </Section>
         <Link to="/home"><Btn icon={<FaHouse/>}></Btn></Link>
         <Link to="/sellcomponent"><Btn icon={<FaMoneyBillWaveAlt />}></Btn></Link>
+        <Link to="/"><Btn icon={<IoLogOut />}></Btn></Link>
         {props.children}
     </StyleNavBar>
   );

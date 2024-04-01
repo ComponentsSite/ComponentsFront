@@ -43,22 +43,21 @@ const FormConnexion = (...props ) => {
   };
 
     const handleSubmit = (e) => {
-      navigate("/home", { replace: true });
+     /*  navigate("/home", { replace: true });
       e.preventDefault();
       axios.post(
         "http://localhost:41545/api/login_check", { username, password }, headers
       ).then((response) =>{
         
-        
+        console.log("Enregistrement réussi");
       }).catch(error => {
         console.error("Erreur de connexion:", error);
-      });
+      }); */
     };
 
 
   return (
     <StyledForm onSubmit={handleSubmit}>
-     {error && <div className="error">{error}</div>}
         <StyledLabel htmlFor="username">Pseudo :</StyledLabel>
         <InputText 
           id="username"

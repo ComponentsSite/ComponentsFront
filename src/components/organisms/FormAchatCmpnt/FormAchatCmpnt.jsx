@@ -33,23 +33,22 @@ const StyledLabel = styled.label`
 
 const FormAchatCmpnt = ( data, ...props  ) => {
 
-    const [prix, setPrix] = useState("");
-    const [creator, setCreator] = useState("");
+    const [prix, setPrix] = useState("1000");
+    const [creator, setCreator] = useState("Anonyme");
     const currentPath = window.location.pathname;
     const navigate = useNavigate();
  
   const handleChange = (e) => {
     /* e.preventDefault();
     axios.get(
-      "http://127.0.0.1:8000/api/login_check", { username, password }, headers
+      "http://127.0.0.1:8000//api/component/name",
     ).then((response) =>{
       
-      navigate("/home", { replace: true });
+      setPtix = response.data.prix;
+      setCreator = response.data.name;
     }).catch(error => {
       console.error("Erreur de connexion:", error);
     }); */
-
-    console.log("Envoyer")
   };
 
   const handleSubmit = (e) => {
@@ -60,13 +59,14 @@ const FormAchatCmpnt = ( data, ...props  ) => {
   return (
 
     <StyledForm onSubmit={handleChange}>
+    {console.log(currentPath)}
      {(() => {
         switch (currentPath) {
-          case 'buycomponent/BtnCustom2':
+          case '/buycomponent/BtnCustom2':
             return <BtnCustom2 text="label"></BtnCustom2>;
-          case 'buycomponent/BtnCustom3':
+          case '/buycomponent/BtnCustom3':
             return <BtnCustom3 text="label"></BtnCustom3>;
-            case 'buycomponent/BtnCustom4':
+            case '/buycomponent/BtnCustom4':
             return <BtnCustom4 text="label"></BtnCustom4>;
           default:
             return <BtnCustom text="label"></BtnCustom>;
@@ -77,14 +77,14 @@ const FormAchatCmpnt = ( data, ...props  ) => {
          id="creator"
          name="creator"
          value={creator}
-         onChange={(e) => setCreator(e.target.value)}
+         disabled
        />
-       <StyledLabel>Prix</StyledLabel>
+       <StyledLabel>Prix (en €) : </StyledLabel>
        <InputText 
          id="prix"
          name="prix"
          value={prix}
-         onChange={(e) => setPrix(e.target.value)}
+         disabled
        />
        <Btn text="Acheter" type="submit" onClick={handleSubmit} />
    </StyledForm>
