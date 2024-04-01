@@ -29,9 +29,7 @@ const StyleSellPage = styled.div`
 function SellComponent() {
 
     const [isNightMode, setIsNightMode] = useState(true);
-
     const invert = () => (isNightMode ? day : night);
-  
 
   return (
     <Provider store={store}>

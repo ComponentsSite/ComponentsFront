@@ -25,12 +25,6 @@ const StyledInput = styled.input`
 `;
 
 const InputText = ({...props}) => {
- 
-    // const [value, setValue] = useState("");
-    // const handleText = (e) => {
-    //   if (value !== e.target.value) {
-    //     setValue(e.target.value);
-    //   }
 
   return (
     <>

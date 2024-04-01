@@ -1,7 +1,6 @@
 import React from "react";
 import { CompleteCard } from "../../molecules";
 import styled from "styled-components";
-import { Paragraph } from "../../atoms";
 
 const StyleListCard = styled.ul`
   display:flex;

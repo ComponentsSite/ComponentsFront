@@ -45,7 +45,6 @@ const CompleteCard = ({ title, text, url, component, name = "", ...props }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    console.log(name, " name")
     navigate(`/buycomponent/${name}`);
   };
   

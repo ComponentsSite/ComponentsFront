@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ListItem, List, InputText, Btn } from "../../atoms";
+import { List, InputText, Btn } from "../../atoms";
 import TodoTask from "../../molecules/TodoTask/TodoTask";
 import { useDispatch, useSelector } from "react-redux";
 import { addTask } from "../../../store";

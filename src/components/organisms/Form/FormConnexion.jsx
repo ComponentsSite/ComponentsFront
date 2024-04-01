@@ -35,7 +35,6 @@ const FormConnexion = (...props ) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const [error, setError] = useState(null);
   const headers = {
     'Content-Type': 'application/json',
     'Authorization': 'Bearer your_access_token_here',
@@ -53,6 +52,7 @@ const FormConnexion = (...props ) => {
       }).catch(error => {
         console.error("Erreur de connexion:", error);
       }); */
+      navigate('/home')
     };
 
 

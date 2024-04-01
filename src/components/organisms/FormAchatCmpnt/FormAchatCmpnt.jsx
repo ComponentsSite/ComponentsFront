@@ -59,7 +59,6 @@ const FormAchatCmpnt = ( data, ...props  ) => {
   return (
 
     <StyledForm onSubmit={handleChange}>
-    {console.log(currentPath)}
      {(() => {
         switch (currentPath) {
           case '/buycomponent/BtnCustom2':

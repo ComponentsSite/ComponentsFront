@@ -1,23 +1,15 @@
-import React, { useState} from "react";
-import { ThemeProvider, styled } from "styled-components";
+import React from "react";
+import { styled } from "styled-components";
 import {CardList, NavBar} from '../organisms'
-import { NightModeSwitch } from "../molecules";
-import { NightModeProvider } from "../../contexts"
 import { Provider } from "react-redux";
 import { store } from "../../store";
 import { BtnCustom, BtnCustom2, BtnCustom3, BtnCustom4 } from "../atoms";
-
-// Style 
-
-
 
 const StyleCardList = styled.div`
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
 `;
-
-// Data
 
 const cardData = [
   {
