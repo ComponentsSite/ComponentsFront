@@ -21,19 +21,19 @@ const night = {
 
 const formData = [
   {
-    value: "",
     label: "Nom du composant",
+    value: " ",
   },
   {
-    value: "",
     label: "Type de composant",
+    value: "",
   },
   {
-    value: "",
+    value: " ",
     label: "Prix",
   },
   {
-    value: "",
+    value: " ",
     label: "Code css",
   },
 ];
@@ -52,7 +52,7 @@ function SellComponent() {
            <Section>
             <Heading marginLeft="8px">Vendre un composant</Heading>
            </Section> 
-            <FormVenteCmpnt data={formData} />
+            <FormVenteCmpnt data={formData}></FormVenteCmpnt>
         </ThemeProvider>
     </Provider>
   );

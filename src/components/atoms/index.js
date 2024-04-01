@@ -10,5 +10,8 @@ import InputCheckbox from "./InputCheckbox/InputCheckbox.jsx";
 import ListItem from "./ListItem/ListItem.jsx";
 import List from "./List/List.jsx";
 import BtnCustom from "./Button/BtnCustom.jsx";
+import BtnCustom2 from "./Button/BtnCustom2.jsx";
+import BtnCustom3 from "./Button/BtnCustom3.jsx";
+import BtnCustom4 from "./Button/BtnCustom4.jsx";
 
-export { Btn, Card, Divider, InputText, Paragraph, Clock, Section, Heading, InputCheckbox,ListItem, List, BtnCustom };
+export { Btn, Card, Divider, InputText, Paragraph, Clock, Section, Heading, InputCheckbox,ListItem, List, BtnCustom, BtnCustom2, BtnCustom3, BtnCustom4 };

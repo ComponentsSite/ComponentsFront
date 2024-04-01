@@ -26,7 +26,7 @@ const NavBar = ({ title, text,icon, handler, ...props }) => {
       </Section>
         <Link to="/home"><Btn icon={<FaHouse/>}></Btn></Link>
         <Link to="/profil"><Btn icon={<FaUser/>}> </Btn></Link>
-        <Btn  icon={<FaMoneyBillWaveAlt />}></Btn>
+        <Link to="/sellcomponent"><Btn icon={<FaMoneyBillWaveAlt />}></Btn></Link>
         {props.children}
     </StyleNavBar>
   );

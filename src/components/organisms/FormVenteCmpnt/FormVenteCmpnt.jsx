@@ -54,7 +54,11 @@ const FormVenteCmpnt = ( data, ...props  ) => {
 
   return (
     <StyledForm onSubmit={handleSubmit}>
-        {console.log(data)}
+      if (Array.isArray(data)) {
+        console.log("it's work")
+      } else {
+        console.error("data n'est pas un tableau !")
+      }
       {data.map((x, i) => {
         let {value, label } = x;
         return (

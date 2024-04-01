@@ -5,7 +5,7 @@ import { NightModeSwitch } from "../molecules";
 import { NightModeProvider } from "../../contexts"
 import { Provider } from "react-redux";
 import { store } from "../../store";
-import { Btn, BtnCustom } from "../atoms";
+import { BtnCustom, BtnCustom2, BtnCustom3, BtnCustom4 } from "../atoms";
 
 // Style 
 
@@ -21,25 +21,25 @@ const StyleCardList = styled.div`
 
 const cardData = [
   {
-    urlMain: "https://i.imgur.com/oYiTqum.jpg",
+    component: <BtnCustom text="Label"></BtnCustom>,
     url: "https://i.imgur.com/sjLMNDM.png",
     title: "Anonyme",
     text: "1000€",
   },
   {
-    urlMain: "https://i.imgur.com/2DhmtJ4.jpg",
+    component: <BtnCustom2 text="Label"></BtnCustom2>,
     url: "https://i.imgur.com/7D7I6dI.png",
     title: "Daisy",
     text: "7€",
   },
   {
-    urlMain: "https://i.imgur.com/oYiTqum.jpg",
+    component: <BtnCustom3 text="Label"></BtnCustom3>,
     url: "https://i.imgur.com/sjLMNDM.png",
     title: "John John",
     text: "45€",
   },
   {
-    component: <BtnCustom text="Label"></BtnCustom>,
+    component: <BtnCustom4 text="Label"></BtnCustom4>,
     url: "https://i.imgur.com/sjLMNDM.png",
     title: "Daisy Bis",
     text: "12€",

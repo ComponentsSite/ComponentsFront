@@ -23,7 +23,7 @@ const day = {
   primary: 'linear-gradient(45deg, #FC466B, #3F5EFB);',
   secondary: "black",
   tertiary: "white",
-  textNavbar:"white"
+  textNavbar:"black"
 }
 
 const night = {

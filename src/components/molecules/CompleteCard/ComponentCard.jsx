@@ -8,26 +8,34 @@ const StyledCard = styled.div`
   text-decoration: none;
   margin-left: 8px;
   border: 2px solid #333;
-  width: fit-content;
-  height: fit-content;
   background : ${(props) => props.background ? props.background : props.theme.tertiary};
   color: ${(props) => (props.color ? props.color : props.theme.textNavbar)};
+  display: flex;
+  flex-direction: column;
+  jusitfy-content: center;
+  padding: 8px;
+  padding-top: 16px;
+  height: 200px;
+  width: 300px;
 `;
 
 const StyledBottomCard = styled.div`
    display : flex;
    flex-direction: column;
    padding: 16px;
+   border-top : 1px solid grey;
+   margin-top: 16px;
 `;
 
 const StyledAchatCard = styled.div`
    display : flex;
+   padding-top: 8px;
    align-items: center;
 `;
 
 const StyledAvatarCard = styled.div`
-   display : flex;
-   align-items: center;
+  display : flex;
+  align-items: center;
 `;
 
 
@@ -39,7 +47,6 @@ const CompleteCard = ({ urlMain, title, text, url, component = <></>, ...props }
       <StyledBottomCard>
         <StyledAvatarCard>
           <img src={url} width="50px" height="50px" alt="avatar du créateur" />
-          <Divider />
           <Section>
             <Section>
               <Section>
